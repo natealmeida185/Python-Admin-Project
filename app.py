@@ -19,7 +19,7 @@ if ENV == 'development':
     'contact':'postgresql://postgres:@Rosewood185@localhost/contact'
 }
 else:
-    app.config['SQLALCHEMY_DATABASE_URL'] = 'postgres://lwrajfomnlvqot:e5bc5616ef4488c3067bcebfb0cd0b38e1f31cb72b1edc49572f3508f26880c6@ec2-34-203-255-149.compute-1.amazonaws.com:5432/d6qliq3jlf1nir'
+    app.config['SQLALCHEMY_DATABASE_URL'] = 'postgres://ppnngvmpfubfmb:2083d3f0e81829f65e01daca372a904fdd712f8f21edb4f308732a292a4291b9@ec2-54-164-241-193.compute-1.amazonaws.com:5432/dh7vs8tcpmnu8'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
