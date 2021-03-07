@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+{% block title %}<title>Upload Gallery</title>{% endblock %}
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>  
+
+{% block nav %}
+<nav class="navbar navbar-expand-md navbar-custom fixed-top">
+    <a class="navbar-brand" href="/admin-panel"><h1 style="font-size:35px; color:white;">ADMIN PANEL</h1></a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <image src="{{ url_for('static', filename='images/toggler.png')}}" alt="logo" height="50" width="50"></image>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <form action="/logout" method="POST">
+                    <button class="logout-button">LOGOUT</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
+  
+{% block body %}
+
+<div class="image-gallery">
+    <h1>UPLOAD GALLERY</h1>
+    <hr style="width: 200px; padding-bottom: 20px;">
+    <div class="container">
+        {% for design in data %}
+        <div class="col">
+            <div class="image-card">
+                <div class="image">
+                    <a href="{{design.url}}"><img src="static/images/graphic-design/{{design.filename}}" style="width:{{design.width}}; height:{{design.height}};"></a>
+                </div>
+                <h4>{{design.title}}</h4>
+                <p>{{design.description}}</p>
+                <button>
+                    <a href="{{design.url}}"></a>
+                    VIEW ON
+                    <img style= "height: 30px; padding-bottom: 4px; padding-left: 3px;" src="{{ url_for('static', filename='images/behance-logo-white.png')}}">
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+<!--Footer Section-->
+{% block footer %}
+<footer>
+    <div class="footer-rights text-center">
+        <p>©adminpanelmanager.ga | All rights reserved. </p>
+    </div>
+</footer>
+{% endblock %}
+</body>
+</html>

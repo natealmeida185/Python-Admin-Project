@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+
+<head>
+{% block title %}<title>Admin Panel</title>{% endblock %}
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+<link rel="stylesheet" type="text/javascript" href="{{ url_for('static', filename='functions.js')}}">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+
+<!--Navbar-->
+{% block nav %}
+<nav class="navbar navbar-expand-md navbar-custom fixed-top">
+    <a class="navbar-brand" href="/"><h1 style="font-size:35px; color:white;">ADMIN PANEL</h1></a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <image src="{{ url_for('static', filename='images/toggler.png')}}" alt="logo" height="50" width="50"></image>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <form action="/uploads"  method="POST">
+                    <button class="view-button">VIEW UPLOADED CONTENT</button>
+                </form>
+                <form action="/logout" method="POST">
+                    <button class="logout-button">LOGOUT</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
+
+<!--Body Section-->
+{% block body %}
+<body>
+<div class="admin-panel">
+    <div class="gallery-upload">
+        <h2 style="text-align: center;">UPLOAD CONTENT</h2>
+        <form action="/admin-panel/upload" method="POST" enctype="multipart/form-data">
+            <input type="text" name="filename" placeholder="Image file name...">
+            <input type="text" name="width" placeholder="Image width...">
+            <input type="text" name="height" placeholder="Image height...">
+            <input type="text" name="title" placeholder="Image title...">
+            <textarea type="text" name="description" placeholder="Image description..."></textarea>
+            <input type="url" name="url" placeholder="External url..."> 
+            <input type="file" name="image" id="image">
+            <button type="submit" name="submit">Upload Content</button>
+        </form>
+    </div>
+</div>
+
+<div class="contact-inquiries">
+    <h1>CONTACT INQUIRIES</h1>
+</div>
+
+<div class="form-submission">
+    <div class="row">
+        {% for inquiry in info %}
+            <div class="col-4">
+                <h3 style="float: left;">Inquiry #:</h3> <p>{{inquiry._id}}</p>
+                <h3 style="float: left;">Name:</h3> <p>{{inquiry.name}}</p>
+                <h3 style="float: left;">Phone:</h3> <p>{{inquiry.phone}}</p>
+                <h3 style="float: left;">Email:</h3> <p>{{inquiry.email}}</p>
+                <h3 style="float: left;">Message:</h3> <p>{{inquiry.message}}</p>
+                <form action="{{ url_for('delete', _id=inquiry._id) }}" method="POST">
+                    <button type="submit">Clear Data</button>
+                </form>
+                <br>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+<!--Footer Section-->
+{% block footer %}
+<footer>
+    <div class="footer-rights text-center">
+        <p>©adminpanelmanager.ga | All rights reserved. </p>
+    </div>
+</footer>
+{% endblock %}
+</body>
+</html>

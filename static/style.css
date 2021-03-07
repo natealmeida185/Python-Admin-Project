@@ -1,0 +1,718 @@
+/* Web Layout - Navbar */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    position: fixed;
+    background: #393939;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.nav-link {
+    color:white;
+    font-weight: 5px;
+    font-size: 22px;
+    margin-right: 25px;
+}
+
+.navbar-brand {
+    margin-left: 15px;
+}
+
+.navbar-collapse {
+    background: #393939;
+}
+
+.dropdown-menu {
+    background: #393939;
+}
+
+.dropdown-item {
+    font-size: 19px;
+    color: white;
+}
+
+.dropdown-item.active {
+    background-color: white;
+    color: white;
+}
+
+.active {
+    color:#6b89e5 !important;
+}
+
+.nav-link:hover {
+    color:#804aa6;
+}
+
+#aboutLink:active {
+    color:#6b89e5 !important;
+}
+
+/* Home Page (Main-Menu) */
+.img-responsive {
+    margin-top: 90px;
+    height: auto;
+    max-width: 100%;
+    z-index: 0;
+}
+
+.main-menu .container {
+    display: flex;
+    align-items: center;
+}
+
+.main-menu .col {
+    z-index: 1;
+    height: 270px;
+    margin-top: -80%;
+    background-color: white;
+    box-shadow: 0px 0px 5px 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.main-menu .header1, .header3 {
+    margin-top: 25px;
+}
+
+.main-menu .header2 {
+    margin-top: 40px;
+}
+
+.main-menu .col button {
+    font-size: 20px;
+    transition-duration: 0.4s;
+    background-color: black;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+    border-radius: none;
+}
+
+.main-menu .col button:focus,
+.main-menu .col button:active {
+    border: none;
+    outline: none;
+}
+
+.main-menu .col button:hover {
+    font-weight: 600;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: none;;
+}
+
+/* Home Page (About-Section) */
+.about-header h1 {
+    z-index: 0;
+    font-size: 75px;
+    height: 305px;
+    padding-top: 15px;
+    color: white;  
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4); 
+    background-image: linear-gradient(to bottom, #3a1c50, #804aa6, rgba(0,0,0,0));
+}
+
+.about-text .container {
+    margin-top: -195px;
+    position: relative;
+    padding-top: 15px;
+    background-color:white;
+    box-shadow: 0px 0px 5px 2px;
+    font-size: 20px;
+    z-index: 100;
+    display: flex;
+    width: 60%;
+}
+
+.about-text .col .skills ul {
+    padding-left: 60px;
+}
+
+.about-text .col .skills h1 {
+    padding-left: 30px;
+}
+
+.about-text .col button {
+    font-size: 20px;
+    transition-duration: 0.4s;
+    background-color: black;
+    color: white !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+}
+
+a:link{
+    color: white;
+}
+
+/* Home Page (Contact-Section) */
+.contact-header h1 {
+    color: black;  
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4); 
+}
+
+.contact-section {
+    margin-top: 20px;
+}
+
+.contact-info h3 {
+    margin-left: 70px;
+}
+
+.contact-info {
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.icon-images {
+    margin-bottom: 30px;
+}
+
+.email-address {
+    color: black;
+}
+
+.phone-number {
+    color: black;  
+}
+
+#contact-icon1:hover {
+    content: url("images/linkedin-icon2.png");
+}
+
+#contact-icon2:hover {
+    content: url("images/instagram-icon2.png");
+}
+
+#contact-icon3:hover {
+    content: url("images/behance-icon2.png");
+}
+
+#contact-icon4:hover {
+    content: url("images/github-icon2.png");
+}
+
+.contact-section .contact-form {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.contact-form .container {
+    color: white;
+    background-color:#6b89e5;
+    padding: 20px;
+}
+
+.contact-form .container button {
+    font-size: 19px;
+    color: white;
+    background-color: #465ea8;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+}
+
+/* Form Styling */
+input[type=text], input[type=email], input[type=url], input[type=file], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Graphic Design Page */
+.image-gallery {
+    padding-top: 120px;
+    text-align: center;
+}
+
+.image-gallery h1 {
+    font-size: 45px;
+}
+
+.image-gallery .container {
+    display: flex;
+}
+
+.image-gallery .container .col {
+    display: flex;
+    justify-content: center;
+}
+
+.image-gallery .container .col .image {
+    width: 350px;
+    height: 300px;
+}
+
+.image-gallery .container .col .image-card {
+    box-shadow: 0px 0px 4px 0.1px;
+    width: 350px;
+    height: 470px;   
+}
+
+.image-gallery .container .col .image-card:hover {
+    box-shadow: 0px 0px 5px 0.3px;
+}
+
+.image-gallery .container .col h4 {
+    color: white;
+    background-color: #393939;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.image-card button {
+    color: white;
+    transition-duration: 0.4s;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #6b89e5;
+}
+
+.image-card button:hover {
+    background-color: #4964b4;
+}
+
+/* Admin Login Page */
+.admin-login {
+    width: 600px;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 500px;
+    color: white;
+    background-color:#6b89e5;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.admin-login button {
+    width: 100%;
+    font-size: 24px;
+    color: white;
+    background-color: #4964b4;
+    margin-top: 30px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+}
+
+.admin-login button:hover {
+    background-color: #465ea8;
+}
+
+.login-error {
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+}
+
+.admin-login input[type=text], input[type=textarea], input[type=password], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Admin-Panel Page */
+.nav-item {
+    display: flex;
+}
+
+.logout-button {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: black;
+    background-color: white;
+    padding: 8px 20px 8px 20px;
+    transition-duration: 0.4s;
+    border: none;
+}
+
+.view-button {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: black;
+    background-color: white;
+    padding: 8px 20px 8px 20px;
+    margin-right: 20px;
+    transition-duration: 0.4s;
+    border: none;
+}
+
+.login-info h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.admin-panel {
+    display: flex;
+    justify-content: center;
+    padding-top: 85px;
+    background-color: #525252;
+}
+
+.gallery-upload {
+    color: white;
+    background-color:#6b89e5;
+    margin: 30px 0px 30px 0px;
+    padding: 10px;
+    width: 50%;
+}
+
+.gallery-upload button {
+    font-size: 19px;
+    color: white;
+    background-color: #465ea8;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+}
+
+.cp-upload {
+    color: white;
+    background-color:#6b89e5;
+    padding: 10px;
+    width: 100%;
+}
+
+.cp-upload button {
+    font-size: 19px;
+    color: white;
+    background-color: #465ea8;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+}
+
+.wd-upload {
+    color: white;
+    background-color:#6b89e5;
+    padding: 10px;
+    width: 100%;
+}
+
+.wd-upload button {
+    font-size: 19px;
+    color: white;
+    background-color: #465ea8;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+}
+
+.contact-inquiries h1 {
+    text-align: center;
+    font-size: 45px;
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #525252;
+    color: white;
+}
+
+.form-submission {
+    background-color:#e4e4e4; 
+    max-width: 100%;
+    padding-top: 20px;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.form-submission h3 {
+    margin-right: 10px;
+}
+
+.form-submission p {
+    font-size: 25px;
+}
+
+.form-submission button {
+    font-size: 20px;
+    transition-duration: 0.4s;
+    background-color: #D94141;
+    color: white !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    border: none;
+}
+
+.form-submission button:hover {
+    background-color: #aa2c2c;
+}
+
+/* Footer Styling */
+.footer .portfolio-links a {
+    font-size: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 20px;
+    color: white;
+}
+
+.linkedin:hover {
+    content: url("images/footer-linkedin-icon2.png");
+}
+
+.instagram:hover {
+    content: url("images/footer-instagram-icon2.png");
+}
+
+.behance:hover {
+    content: url("images/footer-behance-icon2.png");
+}
+
+.github:hover {
+    content: url("images/footer-github-icon2.png");
+}
+
+.footer .social-links {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer {
+    background-color: #393939;
+    padding-top: 10px;
+}
+
+.footer-rights {
+    padding-top: 20px;
+    padding-bottom: 7px;
+    background-color: #333333;
+    font-size: 20px;
+    color: white;
+}
+
+/* Mobile Styling */
+@media (max-width: 1600px) {
+    .main-menu .col {
+        z-index: 1;
+        height: 270px;
+        margin-top: -65%;
+        background-color: white;
+        box-shadow: 0px 0px 5px 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .main-menu .header1, .header2, .header3 {
+        margin-top: 25px;
+    }
+
+    .main-menu .header2 {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .main-menu .col {
+        z-index: 1;
+        height: 270px;
+        margin-top: -60%;
+        background-color: white;
+        box-shadow: 0px 0px 5px 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .main-menu .header1, .header2, .header3 {
+        margin-top: 25px;
+    }
+
+    .main-menu .header2 {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .about-text .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .about-text .col .skills {
+        padding: none;
+        justify-content:center;
+        align-items:center;
+        display: flex;
+     }
+
+    .main-menu .header2 {
+        margin-top: 40px;
+    }
+    
+    .contact-info {
+        margin-left: 20%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-menu .header2 {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .img-responsive {
+        margin-top: 90px;
+        height: auto;
+        object-fit: cover;
+        object-position: 50% 0;
+        height: 660px;
+        z-index: 0;
+    }
+
+    .main-menu .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: -660px;
+    }
+    
+    .about-header {
+        margin-top: 24px;
+    }
+
+    .main-menu .col {
+        z-index: 1;
+        background-color: white;
+        box-shadow: 0px 0px 5px 2px;
+        margin-left: 20px;
+        margin-right:20px;
+        margin-top: 20px;
+    } 
+    .about-text .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .contact-info {
+        margin-left: 15%;
+    }
+
+    .footer .portfolio-links .link2, .link3 {
+        padding-top: 20px;
+        display: block;
+        font-size: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .gallery-upload {
+        color: white;
+        background-color:#6b89e5;
+        margin: 30px 0px 30px 0px;
+        padding: 10px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 772px) {
+    .img-responsive {
+        margin-top: 90px;
+        height: auto;
+        object-fit: cover;
+        object-position: 50% 0;
+        height: 710px;
+        z-index: 0;
+    }
+    .main-menu .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: -700px;
+    }
+    
+    .main-menu .col {
+        z-index: 1;
+        background-color: white;
+        box-shadow: 0px 0px 5px 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    .main-menu .col p {
+        max-width: 460px;
+        white-space: wrap;
+    }
+
+    .contact-info {
+        margin-left: 5%;
+    }
+
+    .gallery-upload {
+        color: white;
+        background-color:#6b89e5;
+        margin: 30px 0px 30px 0px;
+        padding: 10px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 767.5px) {
+    .nav-item {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-text .container {
+        width: 90%;
+    }
+
+    .about-header {
+        margin-top: 24px;
+    }
+
+    .contact-info {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 528px) {
+    .contact-info {
+        margin-left: 0%;
+    }
+}
+
+
+
+

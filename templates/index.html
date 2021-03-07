@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+
+<head>
+{% block title %}<title>Home</title>{% endblock %}
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+<link rel="stylesheet" type="text/javascript" href="{{ url_for('static', filename='functions.js')}}">
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+
+<!--Navbar-->
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <a class="navbar-brand" href="/"><image src="{{ url_for('static', filename='images/logo.png')}}" alt="logo" height="50" width="200"></a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <image src="{{ url_for('static', filename='images/toggler.png')}}" alt="logo" height="50" width="50"></image>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a id="aboutLink" class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Work
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/graphic-design">Graphic Design</a>
+            <a class="dropdown-item" href="website-development">Website Development</a>
+            <a class="dropdown-item" href="/computer-programming">Computer Programming</a>
+        </div>
+        <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        </li>
+    </ul>
+    </div>
+</nav>
+{% endblock %}
+
+<!--Body Section-->
+{% block body %}
+<body>
+    
+<!---Image-->
+<image src="{{ url_for('static', filename='images/banner.jpg')}}" class="img-responsive"></image> 
+
+<!--Main Menu-->
+<div class="main-menu">
+    <div class="container flex-box text-center">
+        <div class="col">
+            <box>
+                <h2 class="header1">COMPUTER PROGRAMMING</h2>
+                <br>
+                <p>Projects programmed to solve a specific task in various different languages</p>
+                <button>SEE MORE</button>
+            </box>
+        </div>
+        <div class="col">
+            <box>
+                <h2 class="header2">GRAPHIC DESIGN</h2>
+                <br>
+                <p>Self-designed visual content used to portray a message or simply made for aesthetic reasoning</p>
+                <button>SEE MORE</button>
+            </box>
+        </div>
+        <div class="col">
+            <box>
+                <h2 class="header3">WEBSITE DEVELOPMENT</h2>
+                <br>
+                <p>Front-end and Back-end web based applications that provide services</p>
+                <button>SEE MORE</button>
+            </box>
+        </div>
+    </div>
+</div>
+
+<!--About Header-->
+<div id="about" class="about-header">
+    <h1 class="text-center">ABOUT</h1>
+</div>
+
+<!--About Section-->
+<div class="about-text">
+    <div class="container flex-box">      
+        <div class="col text-center">
+            <box>
+            <h1>Nathan Almeida</h1>
+            <p>As a young visionary tech designer and developer, 
+                I am equipped for any project or industry. Specializing 
+                in building robust Web Applications and Graphical User 
+                Interfaces, my expertise is unique in its precision, 
+                creativity and innovation.
+            </p>
+            <u><p>Download Most Recent Portfolio</p></u>
+            <button><a href="/downloads/resume.pdf" download>RESUME</a></button>
+            <button><a href="/downloads/cover-letter.pdf" download>COVER LETTER</a></button>
+            <br>
+            <br>
+            </box>
+        </div>
+        <div class="col">
+            <div class="skills">
+                <box>
+                <h1>Proficient Skills</h1>
+                <ul style="list-style-type:square;">
+                    <li>Java, Python, Javascript, C#</li>
+                    <li>HTML, CSS, SASS, Bootstrap</li> 
+                    <li>FLASK, SQL, PHP, JSON, Jinja</li>
+                    <li>Adobe Photoshop, Illustrator, InDesign</li>
+                    <li>Sony Vegas, Adobe Premiere Pro</li>
+                    <li>Search Engine Optimization</li>
+                    <li>Social Media Marketing</li>
+                    <li>Digital Marketing</li>
+                </ul>
+                <br>
+                </box>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<!-- Contact Form -->
+<div class="contact-section">
+    <div class="container flex-box">
+            <div class="col">
+                <h1 style="font-size: 55px; text-align: center;">GET CONNECTED</h1>
+                <hr>
+                <br>
+                <div class="contact-info">
+                    <image style="float: left;" src="{{ url_for('static', filename='images/email-icon.png')}}" height="50" width="50"></image>
+                    <a href="mailto: nathanalmeida@gmail.com"><h3 class="email-address">nathanalmeida@gmail.com</h3></a>
+                    <br>
+                    <image style="float: left;" src="{{ url_for('static', filename='images/phone-icon.png')}}" height="50" width="50"></image>
+                    <a href="tel: 7743017959"><h3 class="phone-number">774-301-7959</h3></a>
+                    <br>
+                    <image style="float: left;" src="{{ url_for('static', filename='images/location-icon.png')}}" height="50" width="50"></image>
+                    <h3>1 Old Ferry Rd, Bristol, RI 02809 | PO BOX: 014578</h3>
+                    <br>
+                </div>
+                <hr>
+                <div class="icon-images">
+                <center>
+                <a href="https://www.linkedin.com/in/nathan-almeida/"><image id="contact-icon1" src="{{ url_for('static', filename='images/linkedin-icon1.png')}}" class="linkedin" height="70" width="70"></image></a>
+                <a href="https://www.instagram.com/nate.almeida/"><image id="contact-icon2" src="{{ url_for('static', filename='images/instagram-icon1.png')}}" class="instagram" style="margin-left: 20px;" height="70" width="70"></image></a>
+                <a href="https://www.behance.net/fullboostn520d"><image id="contact-icon3" src="{{ url_for('static', filename='images/behance-icon1.png')}}" class="behance" style="margin-left: 20px;" height="70" width="70"></image></a>
+                <a href="https://github.com/fullboostnate"><image id="contact-icon4" src="{{ url_for('static', filename='images/github-icon1.png')}}" class="github" style="margin-left: 20px;" height="70" width="70"></image></a>
+                </center>
+                </div>
+            </div>
+
+        <script>
+            function onSubmit(token) {
+                document.getElementById("demo-form").submit();
+            }
+        </script>
+
+        <div class="col">
+            <form action="/" method="POST" class="contact-form" id="form">
+                <div class="container">
+                    {% block message %}
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for msg in messages %}
+                                <h3>{{msg}}</h3>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                    {% endblock %}
+                    <fieldset>
+                    Full Name: <input placeholder="Your name.." type="text" name="name" tabindex="1" value="{{name if name}}" required>
+                    </fieldset>
+                
+                    <fieldset>
+                    Phone Number:<input placeholder="Your phone number.." type="text" name="phone" tabindex="2" value="{{phone if phone}}" required>
+                    </fieldset>
+                
+                    <fieldset>
+                    Email Address:<input placeholder="Your email address.." type="email" name="email" tabindex="2" value="{{phone if phone}}" required>
+                    </fieldset>
+                
+                    <fieldset>
+                    Message:
+                    <textarea placeholder="Your message.." tabindex="5" name="message" value="{{message if message}}" required></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                    <button type="submit" id="contact-submit" value="submit">Submit Inquiry</button>
+                    </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<!--Footer Section-->
+{% block footer %}
+<br>
+<br>
+<br>
+<footer class="footer">
+    <hr>
+    <div class="footer">
+        <div class="col-12">
+            <div class="portfolio-links">
+                <center>
+                <a class="link1">COMPUTER PROGRAMMING</a>
+                <a class="link2" href="/graphic-design">GRAPHIC DESIGN</a>
+                <a class="link3">WEBSITE DEVELOPMENT</a>
+                </center>
+            </div>
+        </div>
+    
+        <div class="col-12">
+            <div class="social-links">
+                <center>
+                <a href="https://www.linkedin.com/in/nathan-almeida/"><image id="footer-icon1" src="{{ url_for('static', filename='images/footer-linkedin-icon1.png')}}" class="linkedin" height="50" width="50"></image></a>
+                <a href="https://www.instagram.com/nate.almeida/"><image id="footer-icon2" src="{{ url_for('static', filename='images/footer-instagram-icon1.png')}}" class="instagram" style="margin-left: 30px;" height="50" width="50"></image></a>
+                <a href="https://www.behance.net/fullboostn520d"><image id="footer-icon3" src="{{ url_for('static', filename='images/footer-behance-icon1.png')}}" class="behance" style="margin-left: 30px;" height="50" width="50"></image></a>
+                <a href="https://github.com/fullboostnate"><image id="footer-icon4" src="{{ url_for('static', filename='images/footer-github-icon1.png')}}" class="github" style="margin-left: 30px;" height="50" width="50"></image></a>
+                </center>
+            </div>
+        </div>
+        <div class="footer-rights text-center">
+            <p>©nathanalmeida.com | All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+{% endblock %}
+</body>
+</html>
