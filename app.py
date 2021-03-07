@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 app.secret_key = "@00admin185@"
 
-app.config["IMAGE-UPLOADS"] = '/Python-Admin-Project/static/images/uploads'
+app.config["IMAGE-UPLOADS"] = '/static/images/uploads'
 
 ENV='development'
 
@@ -153,7 +153,7 @@ def graphics1():
 
 @app.route("/uploads", methods=['POST', 'GET'])
 def graphics2():
-    app.config["IMAGE-UPLOADS"] = '/Python-Admin-Project/static/images/uploads'
+    app.config["IMAGE-UPLOADS"] = '/static/images/uploads'
     
     data = Graphics.query.all()
     db.session.commit()
