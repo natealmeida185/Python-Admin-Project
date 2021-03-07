@@ -20,6 +20,11 @@ if ENV == 'development':
 }
 else:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ppnngvmpfubfmb:2083d3f0e81829f65e01daca372a904fdd712f8f21edb4f308732a292a4291b9@ec2-54-164-241-193.compute-1.amazonaws.com:5432/dh7vs8tcpmnu8'
+    app.config['SQLALCHEMY_BINDS'] = {
+        'alogin': 'postgres://ceairchklcvmrx:c83b3fba40cc565a5cabf0cddb5d04ef0f16a7ca92a2014eedd40d7fc0d69edd@ec2-54-198-252-9.compute-1.amazonaws.com:5432/d81bnevpkq0o8h',
+        'graphics':'postgres://ehocpxskvoscyr:3de785b44b2c1c6dfbadbea78facc6b1a094303e1252df90b6868dc5626829e5@ec2-54-211-77-238.compute-1.amazonaws.com:5432/ddr6arjg6avsvd',
+        'contact':'postgres://vxagjuicvgvurm:b6c00c827738ad18fbdba59fa99da70dc53fdc2184af7e38f5ea8208163d174c@ec2-18-211-97-89.compute-1.amazonaws.com:5432/dt5giv7emvekf'
+    }
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
