@@ -7,9 +7,9 @@ import os
 app = Flask(__name__)
 app.secret_key = "@00admin185@"
 
-app.config["IMAGE-UPLOADS"] = 'Python-Admin-Project/static/images/uploads'
+app.config["IMAGE-UPLOADS"] = '/Python-Admin-Project/static/images/uploads'
 
-ENV='production'
+ENV='development'
 
 if ENV == 'development':
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:@Rosewood185@localhost/postgres'
@@ -153,7 +153,7 @@ def graphics1():
 
 @app.route("/uploads", methods=['POST', 'GET'])
 def graphics2():
-    app.config["IMAGE-UPLOADS"] = 'Python-Admin-Project/static/images/uploads'
+    app.config["IMAGE-UPLOADS"] = '/Python-Admin-Project/static/images/uploads'
     
     data = Graphics.query.all()
     db.session.commit()
