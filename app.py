@@ -12,14 +12,14 @@ app.config["IMAGE-UPLOADS"] = './static/images/uploads'
 ENV='production'
 
 if ENV == 'development':
-    app.config['SQLALCHEMY_DATABASE_URL'] = 'postgresql://postgres:@Rosewood185@localhost/postgres'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:@Rosewood185@localhost/postgres'
     app.config['SQLALCHEMY_BINDS'] = {
     'alogin': 'postgresql://postgres:@Rosewood185@localhost/alogin',
     'graphics':'postgresql://postgres:@Rosewood185@localhost/graphics',
     'contact':'postgresql://postgres:@Rosewood185@localhost/contact'
 }
 else:
-    app.config['SQLALCHEMY_DATABASE_URL'] = 'postgres://ppnngvmpfubfmb:2083d3f0e81829f65e01daca372a904fdd712f8f21edb4f308732a292a4291b9@ec2-54-164-241-193.compute-1.amazonaws.com:5432/dh7vs8tcpmnu8'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ppnngvmpfubfmb:2083d3f0e81829f65e01daca372a904fdd712f8f21edb4f308732a292a4291b9@ec2-54-164-241-193.compute-1.amazonaws.com:5432/dh7vs8tcpmnu8'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
