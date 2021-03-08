@@ -9,7 +9,7 @@ app.secret_key = "@00admin185@"
 
 app.config["IMAGE-UPLOADS"] = './static/images/uploads'
 
-ENV='production'
+ENV='development'
 
 if ENV == 'development':
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:@Rosewood185@localhost/postgres'
