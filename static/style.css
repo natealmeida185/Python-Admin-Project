@@ -16,7 +16,7 @@ html, body {
     color:white;
     font-weight: 5px;
     font-size: 22px;
-    margin-right: 25px;
+    margin-right: 40px;
 }
 
 .navbar-brand {
@@ -237,9 +237,10 @@ input[type=text], input[type=email], input[type=url], input[type=file], select, 
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-/* Graphic Design Page */
+/* Uploads Page */
 .image-gallery {
     padding-top: 120px;
+    padding-bottom: 200px;
     text-align: center;
 }
 
@@ -274,8 +275,8 @@ input[type=text], input[type=email], input[type=url], input[type=file], select, 
 .image-gallery .container .col h4 {
     color: white;
     background-color: #393939;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .image-card button {
@@ -284,10 +285,7 @@ input[type=text], input[type=email], input[type=url], input[type=file], select, 
     border: none;
     font-weight: bold;
     font-size: 15px;
-    padding-top: 8px;
-    padding-bottom: 4px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px 10px 20px;
     background-color: #6b89e5;
 }
 
@@ -300,7 +298,7 @@ input[type=text], input[type=email], input[type=url], input[type=file], select, 
     width: 600px;
     margin: auto;
     margin-top: 200px;
-    margin-bottom: 500px;
+    margin-bottom: 430px;
     color: white;
     background-color:#6b89e5;
     padding-left: 30px;
