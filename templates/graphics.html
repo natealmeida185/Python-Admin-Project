@@ -33,27 +33,25 @@
   
 {% block body %}
 
-<div class="image-gallery">
+<header class="gallery-header">
     <h1>UPLOAD GALLERY</h1>
     <hr style="width: 200px; padding-bottom: 20px;">
-    <div class="container">
-        {% for design in data %}
-        <div class="col">
-            <div class="image-card">
-                <div class="image">
-                    <a href="{{design.url}}"><img src="static/images/uploads/{{design.filename}}" style="width:{{design.width}}; height:{{design.height}};"></a>
-                </div>
-                <h4>{{design.title}}</h4>
-                <p>{{design.description}}</p>
-                <a href="{{design.url}}">
-                    <button>
-                        EXTERNAL LINK 
-                    </button>
-                </a>
-            </div>
+</header>
+<div class="image-gallery container">
+    {% for design in data %}
+    <div class="image-card">
+        <div class="image">
+            <a href="{{design.url}}"><img src="static/images/uploads/{{design.filename}}" style="width:{{design.width}}; height:{{design.height}};"></a>
         </div>
-        {% endfor %}
+        <h4>{{design.title}}</h4>
+        <p>{{design.description}}</p>
+        <a href="{{design.url}}">
+            <button>
+                EXTERNAL LINK 
+            </button>
+        </a>
     </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
